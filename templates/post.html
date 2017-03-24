@@ -1,0 +1,24 @@
+
+<div class="row">
+    <a href="/blog/{{p.key().id()}}"><h2 class="valign">{{p.subject}}</h2></a>
+</div>
+
+    <a href="/blog/{{p.key().id()}}" class="blog-post">
+        <div class="card-panel hoverable z-depth-1">
+            <div class="row">
+                <p class="valign">{{p._render_text | safe}}</p>
+            </div>
+        <br>
+            <div class="row">
+                <p><i class="material-icons tiny">thumb_up</i> {{p.likes}} <b>|</b> <i class="material-icons tiny">mode_edit</i> {{p.created.strftime("%b %d, %y")}} <b>|</b> <i class="material-icons tiny">perm_identity</i> {{author}}</p>
+            </div>
+        </div>
+    {% if user and user.key().id() == post.user_id %}
+        <a href="/delete/{{post.key().id()}}/{{post.user_id}}"><i class="material-icons small">delete</i></a>
+        <a href="/blog/{{post.key().id()}}/edit"><i class="material-icons small">mode_edit</i></a>
+    {% elif user %}
+        <a href="/blog/{{post.key().id()}}/like">LIKE</a>
+        <a href="/blog/{{post.key().id()}}/dislike">UNLIKE</a>
+    {% endif %}
+    </a>
+

@@ -1,0 +1,123 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Multi-User Blog</title>
+
+        <!-- fonts -->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="/static/materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="/static/style.css" media="screen,projection">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </head>
+
+    <!-- Navigation -->
+      <div class="navbar-fixed">
+          <nav class="red darken-1">
+              <div class="nav-wrapper">
+                  <a href="/blog" class="brand-logo center">Multi-User Blog</a>
+                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+                    {% if user %}
+                      <li><a href="/blog/logout">Logout</a></li>
+                      {% else %}
+                      <li><a href="/blog/login">Login</a></li>
+                      <li><a href="/blog/signup">Signup</a></li>
+                      {% endif %}
+                  </ul>
+              </div>
+          </nav>
+      </div>
+      <ul class="side-nav" id="mobile-demo" style="">
+        {% if user %}
+        <li><a href="/blog/logout">Logout</a></li>
+        {% else %}
+        <li><a href="/blog/login">Login</a></li>
+        <li><a href="/blog/signup">Signup</a></li>
+        {% endif %}
+      </ul>
+
+    <body>
+
+        <div class="intro red z-depth-1">
+            <h1 class="white-text text-lighten-5">Welcome, {{username}}</h1>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col s4 m6 l6 center-align">
+                <div class="card blue-grey lighten-4">
+                    <div class="card-content">
+                        <span class="card-title">Go Back</span>
+                        <p>Return back to the main blog page.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <div class="center-align">
+                            <button class="btn waves-effect waves-light blue-grey"><a href="/blog" class="white-text">Go back</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m6 l6 center-align">
+                <div class="card blue-grey lighten-4">
+                    <div class="card-content">
+                        <span class="card-title">Submit a Post</span>
+                        <p>Create a new blog post!</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <div class="center-align">
+                            <button class="btn waves-effect waves-light blue-grey"><a href="/blog/newpost" class="white-text">Submit</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </body>
+
+ <footer class="page-footer red darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text"></h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta varius urna vel ullamcorper. Nullam venenatis ligula vel aliquam feugiat. Nunc non imperdiet est.</p>
+
+
+        </div>
+<!--         <div class="col l3 s12">
+          <h5 class="white-text">Content sourced:</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center-align">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/static/materialize/js/materialize.min.js"></script>
+      <script src="/static/main.js"></script>
+
+</body>
+</html>
+
+</html>

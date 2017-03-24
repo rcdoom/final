@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h3>Login</h3>
+  <div class="row">
+    <form method="post">
+      <div class="row">
+        <div class="input-field col s12 m9 l9">
+          <i class="material-icons prefix">account_circle</i>
+          <input type="text" name="username" id="username" value="{{username}}">
+          <label for="username">Username</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m9 l9">
+          <i class="material-icons prefix">lock_outline</i>
+          <input type="password" name="password" id="password" value="">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <br>
+      <h5>{{ error }}</h5>
+      <button class="btn waves-effect waves-light" type="submit">Submit</button>
+    </form>
+  </div>
+ </div>
+{% endblock %}

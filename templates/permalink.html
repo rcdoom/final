@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	{% if user %}
+		{{post.render(user.key().id()) | safe}}
+	{% else %}
+		{{ post.render(None) | safe }}
+	{% endif %}
+
+	{% if user and user.key().id() == post.user_id %}
+	<div>
+	<p class="right-align">
+		<a href="/delete/{{post.key().id()}}/{{post.user_id}}"><i class="material-icons small">delete</i></a>
+		<a href="/blog/{{post.key().id()}}/edit"><i class="material-icons small">mode_edit</i></a>
+	</p>
+	</div>
+	{% elif user %}
+	<div>
+	<p class="right-align">Like this post? Give it a thumbs up!&nbsp;
+		<a href="/blog/{{post.key().id()}}/like"><i class="material-icons small">thumb_up</i></a>&nbsp;
+		<a href="/blog/{{post.key().id()}}/dislike"><i class="material-icons small">thumb_down</i></a>
+	</p>
+	</div>
+	{% endif %}
+
+	<h5>Comments</h5>  
+  	{% for c in comments %}
+    <ul class="collection">
+        <li class="collection-item">
+        {% if user %} 
+            <a href="/blog/{{post.key().id()}}/{{c.user_id}}/{{ c.key().id() }}/deletecomment" class="secondary-content custom">Delete</a>&nbsp;
+            <a href="/blog/{{post.key().id()}}/{{c.user_id}}/{{ c.key().id() }}/editcomment" class="secondary-content custom">Edit</a></li>
+        {% endif %}{{ c.content }}</li>
+    </ul>
+    
+    {% endfor %}    
+
+	{% if user %}
+		<button class="btn waves-effect waves-teal"><a href="/blog/{{post.key().id()}}/{{user.key().id()}}/addcomment" class="white-text">Add Comment</a></button>
+	{% endif %}
+  
+{% endblock %}
+

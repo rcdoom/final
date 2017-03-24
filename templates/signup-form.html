@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h3>Sign Up</h3>
+        <div class="row signup">
+            <form method="post">
+                <div class="row">
+                    <div class="input-field col s12 m9 l9">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" name="username" id="username" value="{{username}}">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="col s6">{{error_username}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12 m9 l9">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input type="password" name="password" value="" id="password">
+                        <label for="password" data-error="{{error_password}}">Password</label>
+                    </div>
+                    <div class="col s6">{{error_password}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12 m9 l9">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input type="password" name="verify" value="" id="verify">
+                        <label for="verify" data-error="{{error_verify}}">Verify password</label>
+                    </div>
+                    <div class="col s6">{{error_verify}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12 m9 l9">
+                        <i class="material-icons prefix">email</i>
+                        <input type="text" name="email" value="{{email}}" id="email">
+                        <label for="email" data-error="error_email">Email (optional)</label>
+                    </div>
+                    <div class="col s6">{{error_email}}</div>
+                </div>
+                <br>
+                <h5>{{ error }}</h5>
+                <button class="btn waves-effect waves-light" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %} 

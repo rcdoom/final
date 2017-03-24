@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h3>Rot13 Encoder</h3>
+  <p>Simply enter in some text to convert it to the Rot13 encoding and send some secret messages!</p>
+  <br>
+
+  <form method="post">
+    <div class="row">
+      <div class="input-field">
+        <textarea id="text" type="text" name="text" class="materialize-textarea">{{text}}</textarea>
+        <label for="text">Enter text here...</label>
+      </div>
+    </div>
+
+    <br>
+    <button class="btn waves-effect waves-light" type="submit">Submit</button>
+
+  </form>
+  <br>
+</div>
+{% endblock %}

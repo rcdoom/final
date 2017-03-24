@@ -1,0 +1,149 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>About the Creator</title>
+
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- materialize css -->
+        <link rel="stylesheet" href="/static/materialize/css/materialize.min.css">
+        <!-- Custom css -->
+        <link rel="stylesheet" href="static/style.css">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+        <!-- materialize javascript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/static/materialize/js/materialize.min.js"></script>
+        <!-- custom javascript -->
+        <script type="text/javascript" src="static/main.js"></script>
+
+    </head>
+
+    <body>
+    
+        <!-- intro banner -->
+        <div class="intro red darken-1 lighten-2 z-depth-1">
+            <h1 class="white-text text-lighten-5">Rudy Cook</h1>
+            <h5 class="black-text text-darken-1">Web developer</h5>
+        </div>
+
+        <!-- about me -->
+
+        <div class="container about">
+            <h5>about me</h5>
+            <h6>let me introduce myself.</h6>
+            <hr>
+            <div class="row">
+                <!-- first column in about me -->
+                <div class="col s12 m4 l4">
+                    <h6>Story</h6>
+                    <p>Looking to go on an adventure. Powered by lots of <i class="em em-coffee"></i> and <i class="em em-beer"></i>.</p>
+                    <p>Aliquam scelerisque justo at nulla accumsan, nec laoreet enim consequat.Aliquam scelerisque justo at nulla accumsan, nec laoreet enim consequat.</p>
+                </div>
+                <!-- second column in about me -->
+                <div class="col s12 m4 l4">
+                    <h6>Profile</h6>
+                    <div class="card red darken-3">
+                        <div class="card-content white-text">
+
+                            <i class="material-icons small" height="64" width="64">perm_identity</i>
+                            <p>Law grad turned web developer and Python programmer.</p>
+                        </div>
+                        <div class="card-action white-text">
+                            <a href="/blog">link</a>
+                            <a href="#">link</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 tier drop down -->
+                <div class="col s12 m4 l4">
+                    <h6>Education</h6>
+                    <ul class="collapsible">
+                        <li class="active">
+                            <div class="collapsible-header"><i class="mdi-av-web"></i>Designer</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="mdi-editor-format-align-justify"></i>Developer</div>
+                            <div class="collapsible-body"><i class="mdi-av-play-shopping-bag"></i>Video Editor</div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="mdi-editor-insert-comment"></i>Support Asst.</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="container portfolio">
+            <h5>portfolio</h5>
+            <h6>my latest projects</h6>
+            <hr>
+            <div class="row">
+                <div class="col s12 m12 l12 portfolio-holder">
+                    <img class="materialboxed" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+                    <img class="materialboxed" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+                    <img class="materialboxed" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+                    <img class="materialboxed" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+                    <img class="materialboxed" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+                    <img class="materialboxed" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- contact forms -->
+        <div class="container contact">
+            <h5>contact</h5>
+            <h6>get in touch...</h6>
+            <hr>
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="first_name" type="text" class="validate" placeholder="First Name">
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="last_name" type="text" class="validate" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" class="validate" placeholder="Email">
+                                </div>
+                            </div>
+                            <textarea class="materialize-textarea" placeholder="Your message" required></textarea>
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="mdi-content-send right"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6 contact-holder">
+                    <h6 class="mdi-action-home">Adress</h6>
+                    <p>Brighton, East Sussex, UK</p> 
+                    <h6 class="mdi-hardware-phone-android">Phone Number</h6>
+                    <p>0******79</p>
+                    <h6 class="mdi-action-open-in-browser">Website</h6>
+                    <p>wwww.youtube.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-copyright">
+                <div class="container">
+                    Copyright text.
+                    <a class="grey-text text-lighten-4 right" href="#!">Link</a>
+                </div>
+            </div>
+        </footer>
+  </body>
+
+</html>

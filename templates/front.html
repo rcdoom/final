@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{% if user %}
+	<div class="row right-align">
+		<button class="btn-floating btn-large waves-effect waves-light"><a href="/blog/newpost" class="white-text"><i class="material-icons">add</i></a></button>
+	</div>
+	{% endif %}
+
+	
+	{% for p in posts %}
+		{% if user %}
+			{{ p.render(user.key().id()) | safe }}
+			<br><hr><br>
+		{% else %}
+			{{ p.render(None) | safe }}
+		{% endif %}
+	{% endfor %}
+
+
+
+{% endblock %}
